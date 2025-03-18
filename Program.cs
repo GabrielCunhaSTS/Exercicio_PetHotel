@@ -28,7 +28,7 @@ pelagem = Console.ReadLine()!.ToUpper();
  Console.Clear(); 
 
 Console.WriteLine("+=========================================================+");
-Console.WriteLine("|               Pet Hotel 'Au Au Resort'                  |");
+Console.WriteLine("|               Pet Hotel \"Au Au Resort\"                  |");
 Console.WriteLine("+=========================================================+");
 Console.WriteLine($"| Espécie: {especie,-18} | Raça: {raca,-19} |");
 Console.WriteLine("+=========================================================+");
