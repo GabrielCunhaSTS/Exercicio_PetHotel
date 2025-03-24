@@ -1,6 +1,11 @@
 ﻿string especie, raca, alcunha, pelagem;
 int idade;
 
+int limiteEspecie = 18;
+int limiteRaca = 19;
+int limiteAlcunha = 31;
+int limitePelagem = 23;
+
 Console.ForegroundColor = ConsoleColor.Cyan;
 Console.WriteLine("Bem vindo(a) ao Au Au Resort");
 Console.ResetColor();
@@ -41,6 +46,11 @@ Console.ResetColor();
 
 Console.Clear();
 
+especie = especie.Length > limiteEspecie ? especie[..limiteEspecie] : especie.PadLeft(limiteEspecie, '.');
+raca = raca.Length > limiteRaca ? raca[..limiteRaca] : raca.PadLeft(limiteRaca, '.');
+alcunha = alcunha.Length > limiteAlcunha ? alcunha[..limiteAlcunha] : alcunha.PadLeft(limiteAlcunha, '.');
+pelagem = pelagem.Length > limitePelagem ? pelagem[..limitePelagem] : pelagem.PadLeft(limitePelagem, '.');
+
 Console.ForegroundColor = ConsoleColor.Yellow;
 Console.WriteLine("+=========================================================+");
 Console.ResetColor();
@@ -56,11 +66,11 @@ Console.ResetColor();
 Console.ForegroundColor = ConsoleColor.Green;
 Console.Write("| Espécie: ");
 Console.ForegroundColor = ConsoleColor.White;
-Console.Write($"{especie.PadLeft(19,'.')}");
+Console.Write($"{especie}");
 Console.ForegroundColor = ConsoleColor.Green;
 Console.Write(" | Raça: ");
 Console.ForegroundColor = ConsoleColor.White;
-Console.WriteLine($"{raca.PadLeft(18,'.')} |");
+Console.WriteLine($"{raca} |");
 Console.ResetColor();
 
 Console.ForegroundColor = ConsoleColor.Yellow;
@@ -70,15 +80,15 @@ Console.ResetColor();
 Console.ForegroundColor = ConsoleColor.Green;
 Console.Write("| Atende pela alcunha de: ");
 Console.ForegroundColor = ConsoleColor.White;
-Console.WriteLine($"{alcunha.PadLeft(31,'.')} |");
+Console.WriteLine($"{alcunha} |");
 Console.ForegroundColor = ConsoleColor.Green;
 Console.Write("| Idade: ");
 Console.ForegroundColor = ConsoleColor.White;
-Console.Write($"{idade}");
+Console.Write($"{idade.ToString().PadLeft(2, '0')}");
 Console.ForegroundColor = ConsoleColor.Green;
 Console.Write(" ano(s) | Pelagem/cor: ");
 Console.ForegroundColor = ConsoleColor.White;
-Console.WriteLine($"{pelagem.PadLeft(24,'.')} |");
+Console.WriteLine($"{pelagem} |");
 Console.ResetColor();
 
 Console.ForegroundColor = ConsoleColor.Yellow;
